@@ -1,0 +1,181 @@
+/* web site FBFT by zenZero 2025 */
+
+
+/* COLOR PALETTE 
+
+white			-	#ddd
+light grey		-	#aaa
+black			-	#111
+green			-	#1a1
+light green		-	#4d4
+
+discord bleu	-	#5865f2
+discord white	-	#fff; 
+youtube red		-	#f00;
+*/
+
+
+/******************************/
+/*RESET STYLE */
+* {
+	margin : 0;
+	padding : 0;
+}
+
+
+/*main style*/
+body {
+	background-color : #111;
+	background-image : linear-gradient(to bottom, rgba(1, 1, 1, 0) , rgba(1, 1, 1, 1) 20%),
+					   url("../Images/chaos_00.png");
+	/*background-repeat : no-repeat;*/
+	/* background-attachment: fixed; */
+
+	color : #ddd;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size : 16px;
+	
+	text-align : center;
+	
+}
+
+a {
+	color : #1a1;
+	text-decoration : none;
+}
+a:hover {
+	color : #4d4;
+	text-decoration : underline;
+}
+
+h1 {
+	font-size : 600%;
+}
+h2 {
+	font-size : 300%;
+}
+h3 {
+	font-size : 200%;
+}
+
+.clear {
+	clear : both;
+}
+
+footer {
+	height: 80px;
+	background-color : #111;
+	background-image : linear-gradient(to top, rgba(1, 1, 1, 0) , rgba(1, 1, 1, 1) ),
+					   url("../Images/bedrock.png");
+					   
+	font-size : 80%;
+}
+footer p {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+}
+/******************************/
+/*LINK BUTTONS */
+.button {
+	display : inline-block;
+	border-radius: 5px;
+	padding : 10px;
+	
+	background-color : #1a1;
+	
+	color : #fff;
+	font-weight : bold;
+	text-decoration : none;
+	text-align : center;
+}
+.button:hover {
+	color : #fff;
+	text-decoration : none;
+	text-shadow : 0px 0px 1px #111;
+	box-shadow : inset 0px 0px 2px #111;
+}
+
+.discord {
+	background-color : #5865f2;
+	color : #fff;
+}
+
+.youtube {
+	background-color : #f00;
+	color : #fff;
+}
+
+
+/******************************/
+/* HEADER */
+header {
+}
+
+
+
+/* youtube embed */
+.yt-container {
+	text-align : center;
+	
+}
+.yt-embed {
+	padding : 1%;
+	max-width : 1400px;
+	width: 90%;
+	aspect-ratio: 16 / 9;
+}
+
+
+/******************************/
+/* event box */
+#event {
+	display : none;
+	margin : 2% auto;
+	padding : 10px;
+	max-width : 1400px;
+	width: 90%;
+	background-color : #1a1; 
+}
+
+
+/* main 3 columns */
+.row {
+
+}
+.column {
+	float : left;
+	/* width : 33.33%; */
+	box-sizing : border-box;
+	margin : 30px 0 ;
+	border : solid 0px #aaa;
+	border-left-width : 1px;
+}
+
+.column:first-child {
+	border-left-width : 0px;
+}
+
+.c3 {
+	width : 33.33%;
+}
+.c2 {
+	width : 50%;
+}
+
+.column p {
+	margin : 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+} 
+/* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+	.column {
+		width: 100%;
+	}
+} 
