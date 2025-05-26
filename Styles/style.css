@@ -27,7 +27,7 @@ youtube red		-	#f00;
 body {
 	background-color : #111;
 	background-image : linear-gradient(to bottom, rgba(1, 1, 1, 0) , rgba(1, 1, 1, 1) 20%),
-					   url("/Images/chaos_00.png");
+					   url("Images/chaos_00.png");
 	/*background-repeat : no-repeat;*/
 	/* background-attachment: fixed; */
 
@@ -66,7 +66,7 @@ footer {
 	height: 60px;
 	background-color : #111;
 	background-image : linear-gradient(to top, rgba(1, 1, 1, 0) , rgba(1, 1, 1, 1) ),
-					   url("../Images/bedrock.png");
+					   url("Images/bedrock.png");
 					   
 	font-size : 80%;
 	  display: flex;
