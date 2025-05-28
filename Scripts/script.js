@@ -25,7 +25,7 @@ function eventDisplay (force = false) {
 `;	
 evSection = document.getElementById("event");
 		evSection.style.display = "block";
-
+		evSection.innerHTML = evHTML;
 	}
 
 }
