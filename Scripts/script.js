@@ -7,8 +7,8 @@ var url = {
 };
 
 var event = {
-	start : "", 
-	end : "",
+	start : new Date("2020-1-1"), 
+	end : new Date("2020-1-1"),
 	title : "",
 	text : "",
 	image : "",
@@ -16,7 +16,8 @@ var event = {
 	linkUrl : ""
 };
 function eventDisplay (force = false) {
-	if(event.start && event.end || force){
+	let today = new Date();
+	if((event.start <= today && event.end >= today) || force){
 		let evHTML = `<h2>${event.title}</h2>
 <p>${event.title}</p>
 <a class="button" href="${event.linkUrl}">${event.linkText}</a>
