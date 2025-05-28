@@ -4,29 +4,38 @@
 /*
 /*********************************/
 
-/* COLOR PALETTE 
 
-white			-	#ddd
-light grey		-	#aaa
-black			-	#111
-green			-	#1a1
-light green		-	#4d4
 
-discord bleu	-	#5865f2
-discord white	-	#fff; 
-youtube red		-	#f00;
-*/
+
+/*****************************/
+/*color setting */
+:root {
+	--t-white		: #fff;
+	--white			: #ddd;
+	--light-grey	: #aaa;
+	--grey			: #999;
+	--dark-grey		: #555;
+	--black			: #111;
+	--green			: #1a1;
+	--light-green	: #4d4;
+	
+	--t-white		: #fff;
+	--dscr-bleu		: #5865f2;
+	--yt-red		: #f00;
+}
 
 /*****************************/
 /*font loading */
 @font-face {
     font-family: "minecraftia";
-    src: url("Fonts/Minecraftia-Regular.ttf");
+    src: url("../Fonts/Minecraftia-Regular.ttf");
 }
 
 
+
+
 /******************************/
-/*RESET STYLE */
+/*reset */
 * {
 	margin : 0;
 	padding : 0;
@@ -36,96 +45,132 @@ youtube red		-	#f00;
 /*main style*/
 body {
 	
-	padding : 0 10%;
+/*background*/
+	background-color : var(--black);
 	
-	background-color : #111;
-	background-image : linear-gradient(to bottom, rgba(1, 1, 1, 0) , rgba(1, 1, 1, 1) 20%),
-					   url("Images/chaos_00.png");
-	/*background-repeat : no-repeat;*/
-	/* background-attachment: fixed; */
+	background-image : linear-gradient(to bottom, rgba(1, 1, 1, 0) , rgba(1, 1, 1, 1) 10%),
+					   url("../Images/chaos_00.png");
+	background-position : top center;
 
-	color : #ddd;
+
+
+/* font and text base */
+	color :var(--light-grey);
 	
-	/* font-family: Arial, Helvetica, sans-serif; */
 	font-family:minecraftia, Lucida Console, monospace;
-	font-size : 22px;
-	
+	font-size : 20px;
 	text-align : center;
 	
 }
 
 a {
-	color : #1a1;
+	color : var(--green);
 	text-decoration : none;
 }
 a:hover {
-	color : #4d4;
+	color : var(--light-green);
 	text-decoration : underline;
 }
 
+b {
+	color : var(--white);
+	font-size: 110%;
+}
+
 h1 {
-	font-size : 600%;
+	color : var(--white);
+	font-size : 250%;
 }
 h2 {
-	font-size : 300%;
+	color : var(--white);
+	font-size : 200%;
 }
 h3 {
 	font-size : 200%;
 }
 
-.clear {
-	clear : both;
+hr {
+	margin : 50px 0;
 }
 
 footer {
 	height: 60px;
 	background-color : #111;
 	background-image : linear-gradient(to top, rgba(1, 1, 1, 0) , rgba(1, 1, 1, 1) ),
-					   url("Images/bedrock.png");
+					   url("../Images/bedrock.png");
 					   
-	font-size : 80%;
-	  display: flex;
-  align-items: flex-end;
-  justify-content: center ;
+	font-size : 50%;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center ;
 }
 footer p {
 
 }
+
 /******************************/
 /*LINK BUTTONS */
 .button {
+	position : relative;
+	
+	background-color : var(--green);
+	color : var(--t-white);
+	
 	display : inline-block;
-	border-radius: 5px;
-	padding : 20px 10px 10px 10px;
+	border-radius : 4px 4px 6px 6px;
+	border-bottom : solid 5px rgba(85, 85, 85, 0.6);
+	padding : 10px 10px 0px 10px;
 	
-	background-color : #1a1;
-	
-	color : #fff;
+	text-shadow : 0px 0px 5px #111;
 	font-weight : bold;
 	text-decoration : none;
 	text-align : center;
 }
+.button span {
+	position : absolute;
+	top : -20%;
+	right : -8%;
+	rotate : -20deg;
+	display : inline-block;
+	
+	text-shadow : 0px 0px 5px #111;
+	font-size : 90%;
+	
+}
 .button:hover {
-	color : #fff;
+	color : var(--t-white);
 	text-decoration : none;
-	text-shadow : 0px 0px 2px #111;
-	box-shadow : inset 0px 0px 4px #111;
+	text-shadow :none;
+	box-shadow : inset 0px 0px 4px #ccc;
 }
 
 .discord {
 	background-color : #5865f2;
-	color : #fff;
+	color :var(--t-white);
 }
 
 .youtube {
 	background-color : #f00;
-	color : #fff;
+	color : var(--t-white);
 }
 
 
 /******************************/
 /* HEADER */
 header {
+	/* margin-bottom : 30px; */
+}
+header a {
+	position : relative;
+}
+#logo-container {
+ max-width : 1000px;
+ margin : 0px auto;
+}
+
+#logo-container img {
+	width : 100%;
+	height : 100%;
 }
 
 
@@ -137,7 +182,7 @@ header {
 }
 .yt-embed {
 	padding : 1%;
-	max-width : 1400px;
+	max-width : 1100px;
 	width: 90%;
 	aspect-ratio: 16 / 9;
 }
@@ -154,11 +199,13 @@ header {
 	background-color : #1a1; 
 }
 
-
-/* main 3 columns */
+/******************************/
+/* Section Display*/
 .row {
- padding-top :  100px;
+	margin : 80px 10% 0px 10%;
+	/* border-top : 1px solid #555; */
 }
+/* columns */
 .column {
 	float : left;
 	/* width : 33.33%; */
@@ -172,6 +219,15 @@ header {
 	border-left-width : 0px;
 }
 
+.c32:first-child {
+width : 60%;
+font-size : 100%;
+}
+
+.c32 {
+	width :30%;
+	font-size : 80%;
+}
 .c3 {
 	width : 33.33%;
 }
@@ -193,5 +249,6 @@ header {
 @media screen and (max-width: 800px) {
 	.column {
 		width: 100%;
+		border-left-width : 0px;
 	}
 } 
