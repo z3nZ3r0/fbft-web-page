@@ -239,14 +239,6 @@ header a {
 .column:first-child {
 	border-left-width : 0px;
 }
-/* Responsive layout */
-@media screen and (max-width: 1200px) {
-	.column {
-		width: 100%;
-		border-left-width : 0px;
-		border-bottom-width : 1px;
-	}
-} 
 
 .c3 {
 	width : 33.33%;
@@ -264,6 +256,16 @@ header a {
 .column img {
 	float : left;
 }
+
+/* Responsive layout */
+@media screen and (max-width: 1200px) {
+	.column {
+		width: 100%;
+		border-left-width : 0px;
+		border-bottom-width : 1px;
+	}
+} 
+
 
 /******************************/
 /* FOOTER*/
