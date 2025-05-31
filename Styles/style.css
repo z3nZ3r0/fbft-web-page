@@ -1,8 +1,28 @@
-/* web site FBFT by zenZero 2025 */
+/**************************************/
+/*   web site FBFT by zenZero 2025    */
+/*   1.0
+/*   
+/*   
+/*   
+/*	TODO
+/*	ok - Pancarte dans le footer
+/*	ok - Mise en forme de la section event
+/*		ok - max width image css
+/*	ok - Voir pour presenter la chaine YT et/ou JS
+/*	ok - L'histoire du serveur
+/*	ok - favicon
+/*	ok - img css
+/*	ok - Clean le HTML
+/*	ok - Clean le CSS
+/*	ok - Clean le JS
+/*	ok - marking du code 1.0
+/*	ok - Correction du texte
+/*	- relase Github 1.0
 /*
-/* B.O. - https://www.youtube.com/watch?v=AtPK8m2Rz2Q&list=PLsp-oA7mDdVFFQHnbN3RQ-DRpS12bRPXh&index=18
 /*
-/*********************************/
+/*
+/**************************************/
+
 
 
 
@@ -12,7 +32,8 @@
 :root {
 	--t-white		: #fff;
 	--white			: #ddd;
-	--light-grey	: #aaa;
+	--ll-grey		: #aaa;
+	--l-grey		: #ccc;
 	--grey			: #999;
 	--dark-grey		: #555;
 	--black			: #111;
@@ -28,10 +49,8 @@
 /*font loading */
 @font-face {
     font-family: "minecraftia";
-    src: url("../Fonts/Minecraftia-Regular.ttf");
+    src: url("Fonts/Minecraftia-Regular.ttf");
 }
-
-
 
 
 /******************************/
@@ -42,27 +61,25 @@
 }
 
 
+/******************************/
 /*main style*/
 body {
 	
 /*background*/
 	background-color : var(--black);
-	
 	background-image : linear-gradient(to bottom, rgba(1, 1, 1, 0) , rgba(1, 1, 1, 1) 10%),
-					   url("../Images/chaos_00.png");
+					   url("Images/chaos_00.png");
 	background-position : top center;
 
-
-
-/* font and text base */
-	color :var(--light-grey);
-	
+/*font*/
+	color :var(--ll-grey);
 	font-family:minecraftia, Lucida Console, monospace;
 	font-size : 20px;
 	text-align : center;
 	
 }
 
+/*Lien et titre*/
 a {
 	color : var(--green);
 	text-decoration : none;
@@ -89,24 +106,6 @@ h3 {
 	font-size : 200%;
 }
 
-hr {
-	margin : 50px 0;
-}
-
-footer {
-	height: 60px;
-	background-color : #111;
-	background-image : linear-gradient(to top, rgba(1, 1, 1, 0) , rgba(1, 1, 1, 1) ),
-					   url("../Images/bedrock.png");
-					   
-	font-size : 50%;
-	display: flex;
-	align-items: flex-end;
-	justify-content: center ;
-}
-footer p {
-
-}
 
 /******************************/
 /*LINK BUTTONS */
@@ -121,7 +120,7 @@ footer p {
 	border-bottom : solid 5px rgba(85, 85, 85, 0.6);
 	padding : 10px 10px 0px 10px;
 	
-	text-shadow : 0px 0px 5px #111;
+	text-shadow : 0px 0px 5px var(--black);
 	font-weight : bold;
 	text-decoration : none;
 	text-align : center;
@@ -133,7 +132,7 @@ footer p {
 	rotate : -20deg;
 	display : inline-block;
 	
-	text-shadow : 0px 0px 5px #111;
+	text-shadow : 0px 0px 5px var(--black);
 	font-size : 90%;
 	
 }
@@ -141,11 +140,11 @@ footer p {
 	color : var(--t-white);
 	text-decoration : none;
 	text-shadow :none;
-	box-shadow : inset 0px 0px 4px #ccc;
+	box-shadow : inset 0px 0px 4px var(--l-grey);
 }
 
 .discord {
-	background-color : #5865f2;
+	background-color : var(--dscr-bleu);
 	color :var(--t-white);
 }
 
@@ -174,7 +173,34 @@ header a {
 }
 
 
+/******************************/
+/* event box */
+#event {
+	display : none;
+	margin : 2% auto;
+	padding : 10px;
+	max-width : 1200px;
+	width: 90%;
+	background-color : #373; 
+	border : double 10px var(--white);
+	color : var(--t-white);
+}
 
+#event h2 {
+	color : var(--t-white);
+}
+
+#event .button{
+	background-color : var(--ll-grey); 
+}
+
+#event img {
+	float : left;
+	width : 100%;
+	max-width : 250px;
+}
+
+/******************************/
 /* youtube embed */
 .yt-container {
 	text-align : center;
@@ -189,48 +215,44 @@ header a {
 
 
 /******************************/
-/* event box */
-#event {
-	display : none;
-	margin : 2% auto;
-	padding : 10px;
-	max-width : 1400px;
-	width: 90%;
-	background-color : #1a1; 
-}
-
-/******************************/
 /* Section Display*/
 .row {
 	margin : 80px 10% 0px 10%;
 	/* border-top : 1px solid #555; */
 }
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+} 
+
 /* columns */
 .column {
 	float : left;
 	/* width : 33.33%; */
 	box-sizing : border-box;
 	margin : 30px 0 ;
-	border : solid 0px #aaa;
+	border : solid 0px var(--grey);
 	border-left-width : 1px;
 }
-
 .column:first-child {
 	border-left-width : 0px;
 }
+/* Responsive layout */
+@media screen and (max-width: 1200px) {
+	.column {
+		width: 100%;
+		border-left-width : 0px;
+		border-bottom-width : 1px;
+	}
+} 
 
-.c32:first-child {
-width : 60%;
-font-size : 100%;
-}
-
-.c32 {
-	width :30%;
-	font-size : 80%;
-}
 .c3 {
 	width : 33.33%;
+	font-size : 80%;
 }
+
 .c2 {
 	width : 50%;
 }
@@ -239,16 +261,43 @@ font-size : 100%;
 	margin : 20px;
 }
 
-/* Clear floats after the columns */
-.row:after {
-	content: "";
-	display: table;
-	clear: both;
-} 
-/* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-	.column {
-		width: 100%;
-		border-left-width : 0px;
-	}
-} 
+.column img {
+	float : left;
+}
+
+/******************************/
+/* FOOTER*/
+footer {
+	height: 120px;
+	background-color : var(--black);
+	background-image : linear-gradient(to top, rgba(1, 1, 1, 0) , rgba(1, 1, 1, 1) 40% ),
+					   url("Images/bedrock.png");
+					   
+
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end ;
+}
+
+footer img{
+	width : 150px;
+	margin-right : 50px;
+	filter : brightness(0.8);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
